@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ArticlesListService } from './articles-list.service';
 
 @Component({
   selector: 'app-root',
@@ -6,25 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'app';
-
-  allArticles = [
-    {
-      name: 'First article',
-      date: '01/01/2000',
-      tagline: 'this is the very first article',
-      journal: 1
-    },
-    {
-      name: 'Second article',
-      date: '01/01/2000',
-      tagline: 'this is the second article',
-      journal: 2
-    }
-    ];
-
-  articlesToDisplay = this.allArticles;
+  allArticles:any[];
   
+  constructor(private articlesListService: ArticlesListService) {
+    this.allArticles = articlesListService.getArticles();
+    this.articlesToDisplay = this.allArticles;
+  }
+    
   filterList(journal) {
     if (journal !== 0) {
       this.articlesToDisplay = this.allArticles.filter(article => return article.journal === journal);
