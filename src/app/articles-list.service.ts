@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core'
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Subject } from 'rxjs'
+
+const httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable()
 
@@ -10,7 +14,10 @@ export class ArticlesListService {
   }
   
   getArticles() {
-    // return this.http.get('https://www.theatlantic.com/feed/best-of/');
+    // TODO: having issues with CORS, otherwise it would be nice to get this working
+    //   return this.http.get<NewsArticle>('https://www.theguardian.com/us-news/rss/');
+    // }
+    
     let articles =  [
       {
         name: 'First article',
@@ -30,9 +37,9 @@ export class ArticlesListService {
     setTimeout(() => {
       subject.next(articles);
       subject.complete();
-    }, 100);
+    }, 1000);
 
     return subject;
   }
-
-  }
+  
+}

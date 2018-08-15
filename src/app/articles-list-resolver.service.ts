@@ -10,7 +10,15 @@ export class ArticlesListResolver implements Resolve<any> {
   }
   
   resolve() {
-    return this.articlesListService.getArticles()
-     .pipe(map(articles => articles));
+     return this.articlesListService.getArticles()
+      .pipe(map(articles => { return articles} ));
+
+    // this.articlesListService.getArticles()
+    //   .subscribe(data => {
+    //     return data;
+    //   },
+    //   err => console.error(err),
+    //   () => console.log('done fetching articles')
+    //   );
   }
 }
