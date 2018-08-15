@@ -1,14 +1,17 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { HttpClientModule } from '@angular/common/http'
+import { RouterModule } from '@angular/router'
 
-import { AppComponent } from './app.component';
-import { ArticlesListComponent } from './articles-list.component';
-import { ArticlePickerComponent } from './article-picker.component';
-import { ArticlesListService } from './articles-list.service';
+import { AppComponent } from './app.component'
+import { ArticlesListComponent } from './articles-list.component'
+import { ArticlePickerComponent } from './article-picker.component'
+import { ArticleThumbnailComponent } from './article-thumbnail.component'
+import { ArticlesListService } from './articles-list.service'
+import { ArticlesListResolver } from './articles-list-resolver.service'
 
-import { appRoutes } from './routes';
+
+import { appRoutes } from './routes'
 
 @NgModule({
   imports: [
@@ -18,11 +21,14 @@ import { appRoutes } from './routes';
   ],
   declarations: [
     AppComponent,
+    ArticlePickerComponent,
     ArticlesListComponent,
-    ArticlePickerComponent
+    ArticleThumbnailComponent
   ],
-
-  providers: [ArticlesListService],
+  providers: [
+    ArticlesListService,
+    ArticlesListResolver
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
