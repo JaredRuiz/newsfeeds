@@ -10,7 +10,6 @@ export class ArticlePickerComponent {
 
   // send to parent component the journal we want to use
   update(journal) {
-    console.log('in article picker: ' + journal);
     this.eventClick.emit(journal);
   }
 }

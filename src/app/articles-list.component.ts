@@ -8,35 +8,15 @@ import { ArticlesListService } from './articles-list.service';
 })
 
 export class ArticlesListComponent implements OnInit {
-  // @Input() articles: any[];
-  articles: any[];
+  @Input() articles: any[];
   articlesToDisplay: any[];
 
-  // constructor(private articlesListService: ArticlesListService, private route: ActivatedRoute) {
+  constructor(private articlesListService: ArticlesListService, private route: ActivatedRoute) {
 
-  // }
+  }
 
   ngOnInit() {
-    // console.log(this.route.snapshot.data['articles']);
-    // this.articles = this.route.snapshot.data['articles'];
-
-    this.articles = [
-      {
-        name: 'First article',
-        date: '01/01/2000',
-        tagline: 'this is the very first article',
-        journal: 1
-      },
-      {
-        name: 'Second article',
-        date: '01/01/2000',
-        tagline: 'this is the second article',
-        journal: 2
-      }
-    ];
-
-    console.log(this.articles);
-
+    this.articles = this.route.snapshot.data['articles'];
     this.articlesToDisplay = this.articles;
   }
 

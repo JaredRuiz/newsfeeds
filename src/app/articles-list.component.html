@@ -1,4 +1,4 @@
 <article-picker (eventClick)="filterList($event)"></article-picker>
-<div *ngFor="let article of articles">
+<div *ngFor="let article of articlesToDisplay">
   <article-thumbnail [article]="article"></article-thumbnail>
 </div>
