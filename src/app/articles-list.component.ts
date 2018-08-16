@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ArticlesListService } from './articles-list.service';
 
 interface NewsArticle {
   name: string;
@@ -18,7 +17,7 @@ export class ArticlesListComponent implements OnInit {
   @Input() articles: any[];
   articlesToDisplay: any[];
 
-  constructor(private articlesListService: ArticlesListService, private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
 
   }
 
