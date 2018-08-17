@@ -2,10 +2,10 @@ import { Routes } from '@angular/router';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { ArticlesListResolver } from './articles-list/articles-list-resolver.service';
 
-export const appRoutes:Routes = [
+export const appRoutes: Routes = [
   {
     path: 'articles',
-    component: ArticlesListComponent
+    component: ArticlesListComponent,
     resolve: {
       articles: ArticlesListResolver
     }

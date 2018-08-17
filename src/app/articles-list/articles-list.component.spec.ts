@@ -1,4 +1,4 @@
-import { ArticlesListComponent } from './articles-list.component'
+import { ArticlesListComponent } from './articles-list.component';
 import { ActivatedRoute } from '@angular/router';
 
 describe('ArticlesListComponent', () => {
@@ -49,7 +49,7 @@ describe('ArticlesListComponent', () => {
         articleListComponent.ngOnInit();
         articleListComponent.filterList(2);
       });
-      
+
       it('articles is not mutated', () => {
         expect(articleListComponent.articles).toBe(defaultArticles);
       });
@@ -77,7 +77,7 @@ describe('ArticlesListComponent', () => {
         articleListComponent.ngOnInit();
         articleListComponent.filterList(0);
       });
-      
+
       it('articles is not mutated', () => {
         expect(articleListComponent.articles).toBe(defaultArticles);
       });
