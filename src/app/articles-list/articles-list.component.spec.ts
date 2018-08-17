@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 describe('ArticlesListComponent', () => {
   let articleListComponent, route;
-  let defaultArticles = [
+  const defaultArticles = [
     {
       name: 'first Guardian article',
       date: '1/1/2000',

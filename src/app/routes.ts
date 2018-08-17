@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { ArticlesListComponent } from './articles-list.component';
-import { ArticlesListResolver } from './articles-list-resolver.service';
+import { ArticlesListComponent } from './articles-list/articles-list.component';
+import { ArticlesListResolver } from './articles-list/articles-list-resolver.service';
 
 export const appRoutes:Routes = [
   {

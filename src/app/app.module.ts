@@ -4,11 +4,11 @@ import { HttpClientModule } from '@angular/common/http'
 import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component'
-import { ArticlesListComponent } from './articles-list.component'
-import { ArticlePickerComponent } from './article-picker.component'
-import { ArticleThumbnailComponent } from './article-thumbnail.component'
-import { ArticlesListService } from './articles-list.service'
-import { ArticlesListResolver } from './articles-list-resolver.service'
+import { ArticlesListComponent } from './articles-list/articles-list.component'
+import { ArticlePickerComponent } from './article-picker/article-picker.component'
+import { ArticleThumbnailComponent } from './article-thumbnail/article-thumbnail.component'
+import { ArticlesListService } from './articles-list/articles-list.service'
+import { ArticlesListResolver } from './articles-list/articles-list-resolver.service'
 
 
 import { appRoutes } from './routes'
