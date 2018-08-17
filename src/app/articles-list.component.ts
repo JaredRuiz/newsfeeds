@@ -21,7 +21,7 @@ export class ArticlesListComponent implements OnInit {
 
   filterList(journal) {
     if (journal !== 0) {
-      this.articlesToDisplay = this.articles.filter(article => return article.journal === journal);
+      this.articlesToDisplay = this.articles.filter(article => article.journal === journal );
     } else {
       this.articlesToDisplay = this.articles;
     }
